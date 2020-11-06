@@ -1,0 +1,88 @@
+.homeContainer .photo {
+  width: 110%;
+  opacity: 0.5;
+  border-bottom: 2px solid silver;
+}
+.homeContainer .logoContainer {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+}
+.homeContainer .logoContainer .name {
+  animation: slide 1.5s ease-in-out;
+  position: relative;
+  left: -800px;
+  animation-fill-mode: forwards;
+}
+.homeContainer .logoContainer .logo {
+  width: 100%;
+}
+.homeContainer .logoContainer .spanContainer {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 140%;
+}
+.homeContainer .logoContainer .spanContainer .item1 {
+  opacity: 0;
+  animation: fadein 2s ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+.homeContainer .logoContainer .spanContainer .item2 {
+  opacity: 0;
+  animation: fadein 2s ease-in;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+.homeContainer .logoContainer .spanContainer .item3 {
+  opacity: 0;
+  animation: fadein 2s ease-in;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+.homeContainer .services {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 100px auto 0;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+.homeContainer .fade-in.services {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 100px auto 0;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    left: -800px;
+  }
+  to {
+    left: 0px;
+  }
+}
