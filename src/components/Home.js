@@ -22,21 +22,21 @@ const Home = () => {
                     <span className='item3'><h2>Development.</h2></span>
                 </div>
             </div>
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => (
                     <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                         <h1>What We Do</h1>
-                        <p ref={ref}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p ref={ref}>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                     </div>
                 )
                 }
             </InView>
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => 
                     <hr ref={ref} className={inView ? 'fade-in line' : 'line'}/>
                 }
             </InView>
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => 
                     <div className='servicesContainer'>
                         <div className={inView ? 'fade-in services' : 'services'}>

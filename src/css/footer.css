@@ -1,0 +1,58 @@
+.footerContainer {
+  background-color: #333;
+  min-width: 1350px;
+  height: 400px;
+}
+.footerContainer .borders {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 40px;
+}
+.footerContainer .content {
+  margin-left: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.footerContainer .content .servicesTitle {
+  color: #056399;
+}
+.footerContainer .content .servicesTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
+}
+.footerContainer .content .servicesTitle .services {
+  margin-top: 20px;
+}
+.footerContainer .content .servicesTitle .services p {
+  color: silver;
+}
+.footerContainer .content .projectTitle {
+  color: #056399;
+  margin-left: 30%;
+}
+.footerContainer .content .projectTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
+}
+.footerContainer .content .projectTitle .projects {
+  margin-top: 20px;
+}
+.footerContainer .content .projectTitle .projects p {
+  color: silver;
+}
+.footerContainer .content .contactTitle {
+  color: #056399;
+  margin-left: 30%;
+}
+.footerContainer .content .contactTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
+}
+.footerContainer .content .contactTitle .info {
+  margin-top: 20px;
+}
+.footerContainer .content .contactTitle .info p {
+  color: silver;
+}
