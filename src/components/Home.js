@@ -5,19 +5,19 @@ import landingPagePhoto from '../images/engineering-consulting.jpg';
 import blueLogoNoText from '../images/blueLogoNoText.png';
 
 
-const WhatWeDoSection = ({isvisible}) => {
+const WhatWeDoSection = ({isVisible}) => {
     return (
-        <div className={isvisible ? 'fade-in companyDescription' : 'companyDescription'}>
+        <div className={isVisible ? 'fade-in companyDescription' : 'companyDescription'}>
             <h1>What We Do</h1>
             <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
         </div>
     )
 }
 
-const ServicesSection = ({isvisible}) => {
+const ServicesSection = ({isVisible}) => {
     return (
         <div className='servicesContainer'>
-            <div className={isvisible ? 'fade-in services' : 'services'}>
+            <div className={isVisible ? 'fade-in services' : 'services'}>
                 <h1>Our Services</h1>
                 <TrackVisibility once>
                     <div className='cards'>
@@ -42,9 +42,9 @@ const ServicesSection = ({isvisible}) => {
     )
 }
 
-const Line = ({isvisible}) => {
+const Line = ({isVisible}) => {
     return (
-        <hr className={isvisible ? 'fade-in line' : 'line'}/>
+        <hr className={isVisible ? 'fade-in line' : 'line'}/>
     )
 }
 
