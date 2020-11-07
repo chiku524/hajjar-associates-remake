@@ -33,19 +33,19 @@
 }
 .homeContainer .logoContainer .spanContainer .item1 {
   opacity: 0;
-  animation: fadein 2s ease-in;
+  animation: fadein 1.3s ease-in;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 .homeContainer .logoContainer .spanContainer .item2 {
   opacity: 0;
-  animation: fadein 2s ease-in;
+  animation: fadein 1.3s ease-in;
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .homeContainer .logoContainer .spanContainer .item3 {
   opacity: 0;
-  animation: fadein 2s ease-in;
+  animation: fadein 1.3s ease-in;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
@@ -88,7 +88,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  transition: all 1s ease-in-out;
+  transition: all 2s ease-in-out;
   opacity: 0;
 }
 .homeContainer .servicesContainer .services h1 {
@@ -102,7 +102,7 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  transition: all 1s ease-in-out;
+  transition: all 1.5s ease-in-out;
   opacity: 1;
 }
 .homeContainer .servicesContainer .fade-in.services h1 {
