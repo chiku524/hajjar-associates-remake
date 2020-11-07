@@ -22,8 +22,8 @@ const Home = () => {
                     <span className='item3'><h2>Development.</h2></span>
                 </div>
             </div>
-            <InView triggerOnce>
-                {({inView, ref, entry}) => (
+            <InView >
+                {({inView, ref}) => (
                     <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                         <h1>What We Do</h1>
                         <p ref={ref}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -31,12 +31,12 @@ const Home = () => {
                 )
                 }
             </InView>
-            <InView triggerOnce>
+            <InView >
                 {({inView, ref}) => 
                     <hr ref={ref} className={inView ? 'fade-in line' : 'line'}/>
                 }
             </InView>
-            <InView triggerOnce>
+            <InView >
                 {({inView, ref}) => 
                     <div className='servicesContainer'>
                         <div className={inView ? 'fade-in services' : 'services'}>
