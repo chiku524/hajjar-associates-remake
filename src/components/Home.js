@@ -78,19 +78,19 @@ const Home = () => {
                 {({inView, ref}) => (
                     <div className='statsContainer'>
                         <div className='stats'>
-                            <div className='stat'>
+                            <div className='stat stat1'>
                                 <p className='number'>1990</p>
                                 <p className='description'>Year Published</p>
                             </div>
-                            <div className='stat'>
+                            <div className='stat stat2'>
                                 <p className='number'>100 +</p>
                                 <p className='description'>Projects Completed</p>
                             </div>
-                            <div className='stat'>
+                            <div className='stat stat3'>
                                 <p className='number'>4</p>
                                 <p className='description'>Registered Licensed States</p>
                             </div>
-                            <div className='stat'>
+                            <div className='stat stat4'>
                                 <p className='number'>5+</p>
                                 <p className='description'>Areas of Expertise</p>
                             </div>
@@ -103,7 +103,7 @@ const Home = () => {
                     <div className='companyDescriptionContainer'>
                         <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                             <h1>What We Do</h1>
-                            <p ref={ref}>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
+                            <p className='ref' ref={ref}>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                         </div>
                         <div>
                             <div className='carouselContainer'>

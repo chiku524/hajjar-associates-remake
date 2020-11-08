@@ -67,6 +67,30 @@
   text-align: center;
   height: 150px;
 }
+.container-fluid .statsContainer .stats .stat1 {
+  animation: fadein 1.3s ease-in;
+  animation-delay: 3.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.container-fluid .statsContainer .stats .stat2 {
+  animation: fadein 1.3s ease-in;
+  animation-delay: 4.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.container-fluid .statsContainer .stats .stat3 {
+  animation: fadein 1.3s ease-in;
+  animation-delay: 5.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.container-fluid .statsContainer .stats .stat4 {
+  animation: fadein 1.3s ease-in;
+  animation-delay: 6.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
 .container-fluid .statsContainer .stats .stat {
   padding: 0px 30px;
   border-right: 3px solid goldenrod;
