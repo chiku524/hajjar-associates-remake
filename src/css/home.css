@@ -1,11 +1,17 @@
+.container-fluid {
+  background-color: whitesmoke;
+  padding: 0px;
+  margin: 0px;
+}
 .container-fluid .photo {
   width: 100%;
   height: auto;
-  margin: 4% auto 0px;
+  margin: 0 auto 0px;
   opacity: 0.5;
 }
 .container-fluid .lineUnderPhoto {
-  margin-top: 0px;
+  margin: 0px;
+  background-color: #333;
 }
 .container-fluid .logoContainer {
   width: 500px;
@@ -14,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 200px;
+  left: 185px;
   top: 200px;
 }
 .container-fluid .logoContainer .name {
@@ -51,33 +57,44 @@
   animation-delay: 2.6s;
   animation-fill-mode: forwards;
 }
-.container-fluid .companyDescription {
+.container-fluid .companyDescriptionContainer {
+  background: repeating-radial-gradient(#333, #332);
+}
+.container-fluid .companyDescriptionContainer .companyDescription {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 100px auto 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 0;
+  color: #aaa9ad;
 }
-.container-fluid .companyDescription h1 {
+.container-fluid .companyDescriptionContainer .companyDescription h1 {
   margin-bottom: 50px;
+  border-bottom: #0056b3;
 }
-.container-fluid .fade-in.companyDescription {
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 100px auto 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 1;
+  color: #aaa9ad;
 }
-.container-fluid .fade-in.companyDescription h1 {
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription h1 {
   margin-bottom: 50px;
+  border-bottom: 1px solid #0056b3;
 }
 .container-fluid .servicesContainer {
   width: 100%;
@@ -86,7 +103,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0px auto 100px;
+  margin: 0px auto;
+  padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   text-align: justify;
@@ -95,12 +113,14 @@
 }
 .container-fluid .servicesContainer .services h1 {
   margin-top: 70px;
+  border-bottom: 1px solid lightskyblue;
 }
 .container-fluid .servicesContainer .fade-in.services {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0px auto 100px;
+  margin: 0px auto;
+  padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   text-align: justify;
@@ -109,6 +129,7 @@
 }
 .container-fluid .servicesContainer .fade-in.services h1 {
   margin-top: 70px;
+  border-bottom: 1px solid lightskyblue;
 }
 .container-fluid .servicesContainer .cards {
   display: flex;
@@ -119,17 +140,41 @@
   align-items: center;
   margin-top: 40px;
 }
-.container-fluid .servicesContainer .cards .card {
-  height: auto;
+.container-fluid .servicesContainer .cards a {
+  text-decoration: none;
   width: 40%;
-  margin: 0px 70px 40px;
-  padding: 0px 10px;
+  margin: 40px 70px 40px 0px;
+}
+.container-fluid .servicesContainer .cards .card {
+  color: silver;
   display: flex;
   flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
   border: none;
+  padding: 20px 15px;
+  background: repeating-radial-gradient(#333, #332);
+  transition: all ease 0.5s;
 }
-.container-fluid .servicesContainer .cards .card p {
-  padding-top: 20px;
+.container-fluid .servicesContainer .cards .card h4 {
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+.container-fluid .servicesContainer .cards .card div {
+  display: flex;
+  justify-content: flex-end;
+}
+.container-fluid .servicesContainer .cards .card div p {
+  text-align: center;
+  margin-right: 10px;
+  color: green;
+  border: 1px solid green;
+  width: 100px;
+  height: 30px;
+}
+.container-fluid .servicesContainer .cards .card:hover {
+  transform: scale(1.03);
+  transition: all ease 0.5s;
 }
 .container-fluid .line {
   transition: all 1s ease-in-out;
