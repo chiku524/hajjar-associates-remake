@@ -1,11 +1,13 @@
-.homeContainer .photo {
-  width: 110%;
+.container-fluid .photo {
+  width: 100%;
+  height: auto;
+  margin: 4% auto 0px;
   opacity: 0.5;
 }
-.homeContainer .lineUnderPhoto {
+.container-fluid .lineUnderPhoto {
   margin-top: 0px;
 }
-.homeContainer .logoContainer {
+.container-fluid .logoContainer {
   width: 500px;
   height: 400px;
   display: flex;
@@ -15,15 +17,15 @@
   left: 200px;
   top: 200px;
 }
-.homeContainer .logoContainer .name {
+.container-fluid .logoContainer .name {
   animation: fadein 1.5s ease-in-out;
   animation-fill-mode: forwards;
   opacity: 0;
 }
-.homeContainer .logoContainer .logo {
+.container-fluid .logoContainer .logo {
   width: 100%;
 }
-.homeContainer .logoContainer .spanContainer {
+.container-fluid .logoContainer .spanContainer {
   font-size: 20px;
   display: flex;
   flex-direction: row;
@@ -31,25 +33,25 @@
   align-items: center;
   width: 140%;
 }
-.homeContainer .logoContainer .spanContainer .item1 {
+.container-fluid .logoContainer .spanContainer .item1 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-.homeContainer .logoContainer .spanContainer .item2 {
+.container-fluid .logoContainer .spanContainer .item2 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
-  animation-delay: 2s;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
-.homeContainer .logoContainer .spanContainer .item3 {
+.container-fluid .logoContainer .spanContainer .item3 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
-  animation-delay: 3s;
+  animation-delay: 2.6s;
   animation-fill-mode: forwards;
 }
-.homeContainer .companyDescription {
+.container-fluid .companyDescription {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -60,10 +62,10 @@
   transition: all 1s ease-in-out;
   opacity: 0;
 }
-.homeContainer .companyDescription h1 {
+.container-fluid .companyDescription h1 {
   margin-bottom: 50px;
 }
-.homeContainer .fade-in.companyDescription {
+.container-fluid .fade-in.companyDescription {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -74,13 +76,13 @@
   transition: all 1s ease-in-out;
   opacity: 1;
 }
-.homeContainer .fade-in.companyDescription h1 {
+.container-fluid .fade-in.companyDescription h1 {
   margin-bottom: 50px;
 }
-.homeContainer .servicesContainer {
+.container-fluid .servicesContainer {
   width: 100%;
 }
-.homeContainer .servicesContainer .services {
+.container-fluid .servicesContainer .services {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -91,10 +93,10 @@
   transition: all 1s ease-in-out;
   opacity: 0;
 }
-.homeContainer .servicesContainer .services h1 {
+.container-fluid .servicesContainer .services h1 {
   margin-top: 70px;
 }
-.homeContainer .servicesContainer .fade-in.services {
+.container-fluid .servicesContainer .fade-in.services {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -105,36 +107,36 @@
   transition: all 1s ease-in-out;
   opacity: 1;
 }
-.homeContainer .servicesContainer .fade-in.services h1 {
+.container-fluid .servicesContainer .fade-in.services h1 {
   margin-top: 70px;
 }
-.homeContainer .servicesContainer .cards {
+.container-fluid .servicesContainer .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
-.homeContainer .servicesContainer .cards .card {
-  height: 250px;
-  width: 600px;
-  margin: 0px 70px;
+.container-fluid .servicesContainer .cards .card {
+  height: auto;
+  width: 40%;
+  margin: 0px 70px 40px;
   padding: 0px 10px;
   display: flex;
   flex-direction: column;
   border: none;
 }
-.homeContainer .servicesContainer .cards .card p {
+.container-fluid .servicesContainer .cards .card p {
   padding-top: 20px;
 }
-.homeContainer .line {
+.container-fluid .line {
   transition: all 1s ease-in-out;
   opacity: 0;
   margin: 0;
 }
-.homeContainer .fade-in.line {
+.container-fluid .fade-in.line {
   transition: all 1s ease-in-out;
   opacity: 1;
   margin: 0;

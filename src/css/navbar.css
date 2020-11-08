@@ -1,5 +1,8 @@
 .navbar {
   background-color: whitesmoke;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 .navbar .navbarLogo img {
   max-width: 100px;

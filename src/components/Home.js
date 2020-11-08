@@ -5,12 +5,11 @@ import { InView, useInView } from 'react-intersection-observer';
 import '../css/home.css';
 import landingPagePhoto from '../images/engineering-consulting.jpg';
 import blueLogoNoText from '../images/blueLogoNoText.png';
-import { visitors } from '@babel/traverse';
 
 const Home = () => {
 
     return (
-        <div className='homeContainer'>
+        <div className='container-fluid'>
             <img className='photo' src={landingPagePhoto} alt='gotta change this doe' />
             <hr className='lineUnderPhoto'/>
             <div className='logoContainer'>
@@ -22,7 +21,7 @@ const Home = () => {
                     <span className='item3'><h2>Development.</h2></span>
                 </div>
             </div>
-            <InView triggerOnce>
+            <InView >
                 {({inView, ref}) => (
                     <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                         <h1>What We Do</h1>
@@ -31,12 +30,12 @@ const Home = () => {
                 )
                 }
             </InView>
-            <InView triggerOnce>
+            <InView >
                 {({inView, ref}) => 
                     <hr ref={ref} className={inView ? 'fade-in line' : 'line'}/>
                 }
             </InView>
-            <InView triggerOnce>
+            <InView >
                 {({inView, ref}) => 
                     <div className='servicesContainer'>
                         <div className={inView ? 'fade-in services' : 'services'}>
