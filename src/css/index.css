@@ -1,29 +1,36 @@
-.homeContainer .photo {
-  width: 110%;
+.container-fluid {
+  background-color: whitesmoke;
+  padding: 0px;
+  margin: 0px;
+}
+.container-fluid .photo {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0px;
   opacity: 0.5;
+  mix-blend-mode: multiply;
 }
-.homeContainer .lineUnderPhoto {
-  margin-top: 0px;
+.container-fluid .lineUnderPhoto {
+  margin: 0px;
+  background-color: #333;
 }
-.homeContainer .logoContainer {
+.container-fluid .logoContainer {
   width: 500px;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 200px;
+  left: 185px;
   top: 200px;
 }
-.homeContainer .logoContainer .name {
-  animation: fadein 1.5s ease-in-out;
-  animation-fill-mode: forwards;
-  opacity: 0;
+.container-fluid .logoContainer .name {
+  opacity: 1;
 }
-.homeContainer .logoContainer .logo {
+.container-fluid .logoContainer .logo {
   width: 100%;
 }
-.homeContainer .logoContainer .spanContainer {
+.container-fluid .logoContainer .spanContainer {
   font-size: 20px;
   display: flex;
   flex-direction: row;
@@ -31,110 +38,149 @@
   align-items: center;
   width: 140%;
 }
-.homeContainer .logoContainer .spanContainer .item1 {
+.container-fluid .logoContainer .spanContainer .item1 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-.homeContainer .logoContainer .spanContainer .item2 {
+.container-fluid .logoContainer .spanContainer .item2 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
-  animation-delay: 2s;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
-.homeContainer .logoContainer .spanContainer .item3 {
+.container-fluid .logoContainer .spanContainer .item3 {
   opacity: 0;
   animation: fadein 1.3s ease-in;
-  animation-delay: 3s;
+  animation-delay: 2.6s;
   animation-fill-mode: forwards;
 }
-.homeContainer .companyDescription {
+.container-fluid .companyDescriptionContainer {
+  background: repeating-radial-gradient(#333, #332);
+}
+.container-fluid .companyDescriptionContainer .companyDescription {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 100px auto 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  color: #aaa9ad;
+}
+.container-fluid .companyDescriptionContainer .companyDescription h1 {
+  margin-bottom: 50px;
+  border-bottom: #0056b3;
+}
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  color: #aaa9ad;
+}
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription h1 {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #0056b3;
+}
+.container-fluid .servicesContainer {
+  width: 100%;
+}
+.container-fluid .servicesContainer .services {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px auto;
+  padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 0;
 }
-.homeContainer .companyDescription h1 {
-  margin-bottom: 50px;
+.container-fluid .servicesContainer .services h1 {
+  margin-top: 70px;
+  border-bottom: 1px solid lightskyblue;
 }
-.homeContainer .fade-in.companyDescription {
+.container-fluid .servicesContainer .fade-in.services {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 100px auto 100px;
+  width: 100%;
+  margin: 0px auto;
+  padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 1;
 }
-.homeContainer .fade-in.companyDescription h1 {
-  margin-bottom: 50px;
-}
-.homeContainer .servicesContainer {
-  width: 100%;
-}
-.homeContainer .servicesContainer .services {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0px auto 100px;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  transition: all 1s ease-in-out;
-  opacity: 0;
-}
-.homeContainer .servicesContainer .services h1 {
+.container-fluid .servicesContainer .fade-in.services h1 {
   margin-top: 70px;
+  border-bottom: 1px solid lightskyblue;
 }
-.homeContainer .servicesContainer .fade-in.services {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0px auto 100px;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  transition: all 1s ease-in-out;
-  opacity: 1;
-}
-.homeContainer .servicesContainer .fade-in.services h1 {
-  margin-top: 70px;
-}
-.homeContainer .servicesContainer .cards {
+.container-fluid .servicesContainer .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
-.homeContainer .servicesContainer .cards .card {
-  height: 250px;
-  width: 600px;
-  margin: 0px 70px;
-  padding: 0px 10px;
+.container-fluid .servicesContainer .cards a {
+  text-decoration: none;
+  width: 40%;
+  margin: 40px 70px 40px 0px;
+}
+.container-fluid .servicesContainer .cards .card {
+  color: silver;
   display: flex;
   flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
   border: none;
+  padding: 20px 15px;
+  background: repeating-radial-gradient(#333, #332);
+  transition: all ease 0.5s;
 }
-.homeContainer .servicesContainer .cards .card p {
-  padding-top: 20px;
+.container-fluid .servicesContainer .cards .card h4 {
+  text-decoration: underline;
+  text-decoration-color: green;
 }
-.homeContainer .line {
+.container-fluid .servicesContainer .cards .card div {
+  display: flex;
+  justify-content: flex-end;
+}
+.container-fluid .servicesContainer .cards .card div p {
+  text-align: center;
+  margin-right: 10px;
+  color: green;
+  border: 1px solid green;
+  width: 100px;
+  height: 30px;
+}
+.container-fluid .servicesContainer .cards .card:hover {
+  transform: scale(1.03);
+  transition: all ease 0.5s;
+}
+.container-fluid .line {
   transition: all 1s ease-in-out;
   opacity: 0;
   margin: 0;
 }
-.homeContainer .fade-in.line {
+.container-fluid .fade-in.line {
   transition: all 1s ease-in-out;
   opacity: 1;
   margin: 0;
@@ -155,38 +201,47 @@
     left: 0px;
   }
 }
-.navbar {
-  background-color: whitesmoke;
+.navbarContainer {
+  width: 100%;
+  height: 62.484px;
 }
-.navbar .navbarLogo img {
+.navbarContainer .navbar {
+  background-color: #333;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.navbarContainer .navbar .navbarLogo img {
   max-width: 100px;
   mix-blend-mode: multiply;
 }
-.navbar .nav-link:hover {
-  text-shadow: 0px 0px 10px blue;
+.navbarContainer .navbar .nav-link {
+  color: silver;
+}
+.navbarContainer .navbar .nav-link:hover {
+  text-shadow: 0px 0px 10px #0f6fff;
+  color: silver;
 }
 .footerContainer {
   background-color: #333;
-  height: 400px;
+  height: 100%;
 }
 .footerContainer .borders {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 100%;
   padding-top: 40px;
 }
 .footerContainer .content {
-  margin-left: 40px;
+  margin-left: 5%;
   margin-top: 40px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .footerContainer .content .servicesTitle {
   color: #056399;
-}
-.footerContainer .content .servicesTitle hr {
-  border-top: 2px solid silver;
-  width: 90px;
 }
 .footerContainer .content .servicesTitle .services {
   margin-top: 20px;
@@ -196,11 +251,7 @@
 }
 .footerContainer .content .projectTitle {
   color: #056399;
-  margin-left: 30%;
-}
-.footerContainer .content .projectTitle hr {
-  border-top: 2px solid silver;
-  width: 90px;
+  margin-left: 25%;
 }
 .footerContainer .content .projectTitle .projects {
   margin-top: 20px;
@@ -210,11 +261,7 @@
 }
 .footerContainer .content .contactTitle {
   color: #056399;
-  margin-left: 30%;
-}
-.footerContainer .content .contactTitle hr {
-  border-top: 2px solid silver;
-  width: 90px;
+  margin-left: 25%;
 }
 .footerContainer .content .contactTitle .info {
   margin-top: 20px;
