@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Link } from 'react-router-dom';
 import '../css/navbar.css';
 import {Navbar, NavbarBrand, Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu} from 'reactstrap';
-import blueLogoNoText from '../images/blueLogoNoText.png';
+import wallCufoff from '../images/wallCutoff.png';
 
 const NavBar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -14,7 +14,7 @@ const NavBar = () => {
             <Navbar light fixed='top' expand='xs' className='navbar'>
                 <Link to='/home'>
                     <NavbarBrand to="/home" className='navbarLogo'>
-                        <img src={blueLogoNoText} alt='hajjarLogo' />
+                        <img src={wallCufoff} alt='hajjarLogo' />
                     </NavbarBrand>
                 </Link>
                 <Nav className="mr-auto" navbar>
