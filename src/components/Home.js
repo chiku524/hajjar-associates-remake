@@ -22,7 +22,7 @@ const Home = () => {
                     <span className='item3'><h2>Development.</h2></span>
                 </div>
             </div>
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => (
                     <div className='companyDescriptionContainer'>
                         <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
@@ -33,12 +33,12 @@ const Home = () => {
                 )
                 }
             </InView >
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => 
                     <hr ref={ref} className={inView ? 'fade-in line' : 'line'}/>
                 }
             </InView>
-            <InView >
+            <InView triggerOnce>
                 {({inView, ref}) => 
                     <div className='servicesContainer'>
                         <div className={inView ? 'fade-in services' : 'services'}>
