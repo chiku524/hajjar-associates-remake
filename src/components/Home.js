@@ -13,6 +13,8 @@ import development from '../images/development.webp';
 import hibiscus from '../images/38HibiscusIsland.jpg';
 import voda1 from '../images/VodaI.jpg';
 import alton from '../images/MiamiBeachFifth&Alton.jpg';
+import consultingIcon from '../images/consultingIcon.png';
+import constructionIcon from '../images/constructionIcon.png';
 
 const projects = [
     {
@@ -76,30 +78,6 @@ const Home = () => {
             </div>
             <InView triggerOnce>
                 {({inView, ref}) => (
-                    <div className='statsContainer'>
-                        <div className='stats'>
-                            <div className='stat stat1'>
-                                <p className='number'>1990</p>
-                                <p className='description'>Year Published</p>
-                            </div>
-                            <div className='stat stat2'>
-                                <p className='number'>100 +</p>
-                                <p className='description'>Projects Completed</p>
-                            </div>
-                            <div className='stat stat3'>
-                                <p className='number'>4</p>
-                                <p className='description'>Registered Licensed States</p>
-                            </div>
-                            <div className='stat stat4'>
-                                <p className='number'>5+</p>
-                                <p className='description'>Areas of Expertise</p>
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </InView>
-            <InView triggerOnce>
-                {({inView, ref}) => (
                     <div className='companyDescriptionContainer'>
                         <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                             <h1>What We Do</h1>
@@ -119,6 +97,39 @@ const Home = () => {
                     </div>
                 )}
             </InView >
+            <InView >
+                {({inView, ref}) => (
+                    <div className='background'>
+                        <div ref={ref} className={inView ? 'fade-in statsContainer' : 'statsContainer'}>
+                            <hr className='fade-in line' />
+                            <div className='stats'>
+                                <hr className='fade-in line' />
+                                <div className='stat stat1'>
+                                    <p className='number'>1990</p>
+                                    <p className='description'>Year Published</p>
+                                </div>
+                                <hr className='fade-in line' />
+                                <div className='stat stat2'>
+                                    <p className='number'>100 +</p>
+                                    <p className='description'>Projects Completed</p>
+                                </div>
+                                <hr className='fade-in line' />
+                                <div className='stat stat3'>
+                                    <p className='number'>4</p>
+                                    <p className='description'>Registered Licensed States</p>
+                                </div>
+                                <hr className='fade-in line' />
+                                <div className='stat stat4'>
+                                    <p className='number'>5+</p>
+                                    <p className='description'>Areas of Expertise</p>
+                                </div>
+                                <hr className='fade-in line' />
+                            </div>
+                        </div>
+                    </div>
+                    
+                )}
+            </InView>
             <InView triggerOnce>
                 {({inView, ref}) => 
                     <hr ref={ref} className={inView ? 'fade-in line' : 'line'}/>
@@ -132,7 +143,7 @@ const Home = () => {
                             <div ref={ref} className='cards'>
                                 <Link to='/consulting'>
                                     <div className='card'>
-                                        <img src={consulting} alt='wix' />
+                                        <img src={consultingIcon} alt='wix' className='consulting' />
                                         <h4>Consulting</h4>
                                         <p>M. Hajjar & Associates, Inc. consults in planning, design, modification, or rehabilitation of public and private infrastructure. Our engineers and architects are registered professionals who practice in many disciplines, including civil engineering, structural engineering, and architecture.</p>
                                         <div><span>Learn more!</span></div>
@@ -140,7 +151,7 @@ const Home = () => {
                                 </Link>
                                 <Link to='/construction'>
                                     <div className='card'>
-                                        <img src={construction} alt='wix' />
+                                        <img src={constructionIcon} alt='wix' />
                                         <h4>Construction</h4>
                                         <p>M. Hajjar & Associates, Inc. construction services range from new built projects, maintenance projects or just simple renovations and rehabilitation. Our team has many years of experience within the field with a broad range of projects.</p>
                                         <div><span>Learn more!</span></div>

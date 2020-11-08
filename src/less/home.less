@@ -59,65 +59,63 @@
         }
     }
 
-    .statsContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .background {
+        opacity: 1;
+        background: repeating-radial-gradient(#333, #332);
+        border-top: 1px solid silver;
+        border-bottom: 1px solid silver;
 
-        .stats {
+        .statsContainer {
             display: flex;
-            position: relative;
-            bottom: 10%;
-            background: linear-gradient(gold, darkgoldenrod);
-            width: 100%;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            height: 150px;
-
-            .stat1 {
-                animation: fadein 1.3s ease-in;
-                animation-delay: 3.3s;
-                animation-fill-mode: forwards;
-                opacity: 0;
-            }
-            .stat2 {
-                animation: fadein 1.3s ease-in;
-                animation-delay: 4.3s;
-                animation-fill-mode: forwards;
-                opacity: 0;
-            }
-            .stat3 {
-                animation: fadein 1.3s ease-in;
-                animation-delay: 5.3s;
-                animation-fill-mode: forwards;
-                opacity: 0;
-            }
-            .stat4 {
-                animation: fadein 1.3s ease-in;
-                animation-delay: 6.3s;
-                animation-fill-mode: forwards;
-                opacity: 0;
-            }
+            opacity: 0;
+            transition: all 1s ease-in;
     
-            .stat {
-                padding: 0px 30px;
-                border-right: 3px solid goldenrod;
-                border-left: 3px solid goldenrod;
+            .stats {
+                display: flex;
+                position: relative;
+                bottom: 10%;
+                color: white;
+                // background: repeating-radial-gradient(white, whitesmoke);
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 150px;
     
-                .number {
-                    font-size: 40px;
-                    font-weight: bold;
-                    text-shadow: 2px 2px 2px grey;
+                hr {
+                    border-right: 2px solid silver;
+                    height: 100px;
                 }
-    
-                .description {
-                    font-size: 30px;
-                    text-shadow: 2px 2px 2px grey;
+        
+                .stat {
+                    padding: 0px 30px;
+                    // border-right: 3px solid goldenrod;
+                    // border-left: 3px solid goldenrod;
+        
+                    .number {
+                        font-size: 40px;
+                        // font-weight: bold;
+                        // text-shadow: 2px 2px 2px grey;
+                    }
+        
+                    .description {
+                        font-size: 30px;
+                        // text-shadow: 2px 2px 2px grey;
+                    }
                 }
             }
         }
+        .fade-in.statsContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: all 1s ease-in;
+        }
     }
+    
 
     .companyDescriptionContainer {
         background: repeating-radial-gradient(#333, #332);
@@ -137,7 +135,7 @@
             text-align: justify;
             transition: all 1s ease-in-out;
             opacity: 0;
-            color: #aaa9ad;
+            color: white;
 
             h1 {
                 margin-bottom: 50px;
@@ -156,7 +154,7 @@
             text-align: justify;
             transition: all 1s ease-in-out;
             opacity: 1;
-            color: #aaa9ad;
+            color: white;
 
             h1 {
                 margin-bottom: 50px;
@@ -176,6 +174,11 @@
                 align-items: flex-end;
                 height: 100%;
 
+                .carousel-caption {
+                    position: absolute;
+                    top: 85%;
+                    margin: 0 auto;
+                }
                 .carousel.slide {
                     width: 100%;
                 }
@@ -263,7 +266,17 @@
                 img {
                     position: absolute;
                     right: 25px;
-                    max-width: 100px;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                img {
+                    transform: scale(.8);
+                    position: absolute;
+                    top: 10px;
+                    right: 25px;
+                    opacity: .3;
+                    transition: all .5s ease;
                 }
 
                 h4 {
@@ -288,6 +301,7 @@
                         width: 130px;
                         height: 40px;
                         border-radius: 25px;
+                        transition: all .5s ease;
                     }
                 }
             }
@@ -299,6 +313,13 @@
                 background-color: #0056b3;
                 color: white;
                 border-color: #0056b3;
+                transition: all .5s ease;
+            }
+            .card:hover img {
+                opacity: 1;
+                transition: all .5s ease;
+                width: 100px;
+                height: 100px;
             }
         }
     }

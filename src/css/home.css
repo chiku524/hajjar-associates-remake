@@ -51,59 +51,49 @@
   animation-delay: 2.1s;
   animation-fill-mode: forwards;
 }
-.container-fluid .statsContainer {
+.container-fluid .background {
+  opacity: 1;
+  background: repeating-radial-gradient(#333, #332);
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+.container-fluid .background .statsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: all 1s ease-in;
 }
-.container-fluid .statsContainer .stats {
+.container-fluid .background .statsContainer .stats {
   display: flex;
   position: relative;
   bottom: 10%;
-  background: linear-gradient(gold, darkgoldenrod);
+  color: white;
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 150px;
 }
-.container-fluid .statsContainer .stats .stat1 {
-  animation: fadein 1.3s ease-in;
-  animation-delay: 3.3s;
-  animation-fill-mode: forwards;
-  opacity: 0;
+.container-fluid .background .statsContainer .stats hr {
+  border-right: 2px solid silver;
+  height: 100px;
 }
-.container-fluid .statsContainer .stats .stat2 {
-  animation: fadein 1.3s ease-in;
-  animation-delay: 4.3s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-.container-fluid .statsContainer .stats .stat3 {
-  animation: fadein 1.3s ease-in;
-  animation-delay: 5.3s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-.container-fluid .statsContainer .stats .stat4 {
-  animation: fadein 1.3s ease-in;
-  animation-delay: 6.3s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-.container-fluid .statsContainer .stats .stat {
+.container-fluid .background .statsContainer .stats .stat {
   padding: 0px 30px;
-  border-right: 3px solid goldenrod;
-  border-left: 3px solid goldenrod;
 }
-.container-fluid .statsContainer .stats .stat .number {
+.container-fluid .background .statsContainer .stats .stat .number {
   font-size: 40px;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px grey;
 }
-.container-fluid .statsContainer .stats .stat .description {
+.container-fluid .background .statsContainer .stats .stat .description {
   font-size: 30px;
-  text-shadow: 2px 2px 2px grey;
+}
+.container-fluid .background .fade-in.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 1s ease-in;
 }
 .container-fluid .companyDescriptionContainer {
   background: repeating-radial-gradient(#333, #332);
@@ -123,7 +113,7 @@
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 0;
-  color: #aaa9ad;
+  color: white;
 }
 .container-fluid .companyDescriptionContainer .companyDescription h1 {
   margin-bottom: 50px;
@@ -141,7 +131,7 @@
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 1;
-  color: #aaa9ad;
+  color: white;
 }
 .container-fluid .companyDescriptionContainer .fade-in.companyDescription h1 {
   margin-bottom: 50px;
@@ -158,6 +148,11 @@
   justify-content: flex-end;
   align-items: flex-end;
   height: 100%;
+}
+.container-fluid .companyDescriptionContainer div .carouselContainer .carousel-caption {
+  position: absolute;
+  top: 85%;
+  margin: 0 auto;
 }
 .container-fluid .companyDescriptionContainer div .carouselContainer .carousel.slide {
   width: 100%;
@@ -236,7 +231,16 @@
 .container-fluid .servicesContainer .cards .card img {
   position: absolute;
   right: 25px;
-  max-width: 100px;
+  width: 100px;
+  height: 100px;
+}
+.container-fluid .servicesContainer .cards .card img {
+  transform: scale(0.8);
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
 }
 .container-fluid .servicesContainer .cards .card h4 {
   text-decoration: underline;
@@ -258,6 +262,7 @@
   width: 130px;
   height: 40px;
   border-radius: 25px;
+  transition: all 0.5s ease;
 }
 .container-fluid .servicesContainer .cards .card:hover {
   transform: scale(1);
@@ -267,6 +272,13 @@
   background-color: #0056b3;
   color: white;
   border-color: #0056b3;
+  transition: all 0.5s ease;
+}
+.container-fluid .servicesContainer .cards .card:hover img {
+  opacity: 1;
+  transition: all 0.5s ease;
+  width: 100px;
+  height: 100px;
 }
 .container-fluid .line {
   transition: all 1s ease-in-out;
