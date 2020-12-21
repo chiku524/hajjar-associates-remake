@@ -57,7 +57,7 @@ const Home = () => {
 
     const slides = projects.map((item) => {
       return(
-          <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item}>
+          <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.altText}>
               <img src={item.src} alt={item.altText} />
               <CarouselCaption captionHeader={item.caption} />
           </CarouselItem>
@@ -66,14 +66,14 @@ const Home = () => {
 
     return (
         <div className='container-fluid'>
-            <img className='photo' src={landingPagePhoto} alt='gotta change this doe' />
-            <div className='logoContainer'>
-                <div className='name'><h1>M. Hajjar & Associates</h1></div>
-                <img className='logo' src={wallCutoff} alt='logo' />
-                <div className='spanContainer'>
-                    <span className='item1'><h2>Consulting.</h2></span>
-                    <span className='item2'><h2>Construction.</h2></span>
-                    <span className='item3'><h2>Development.</h2></span>
+            <div className='containTheCarousel'>
+                <div className='carouselContainer'>
+                    <Carousel activeIndex={activeIndex} next={next} previous={previous} className='carousel-fade'>
+                        <CarouselIndicators items={projects} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                        {slides}
+                        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                    </Carousel>
                 </div>
             </div>
             <InView >
@@ -83,17 +83,6 @@ const Home = () => {
                             <h1>What We Do</h1>
                             <p className='ref' ref={ref}>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                         </div>
-                        <div>
-                            <div className='carouselContainer'>
-                                <Carousel activeIndex={activeIndex} next={next} previous={previous} className='carousel-fade'>
-                                    <CarouselIndicators items={projects} activeIndex={activeIndex} onClickHandler={goToIndex} />
-                                    {slides}
-                                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                                    <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-                                </Carousel>
-                            </div>
-                        </div>
-                        
                     </div>
                 )}
             </InView >

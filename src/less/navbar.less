@@ -1,17 +1,60 @@
 .navbarContainer {
     width: 100%;
-    height: 55.953px;
+    transition: all 1s ease;
+    position: fixed;
+    z-index: 20;
 
     .navbar {
-        background-color: #333;
-        width: 100%;
+        width: 90%;
         padding: 0px;
-        margin: 0px;
+        margin: 0px auto;
+    
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 70%;    
+        }
         
         .navbarLogo {
-            img {
-                max-width: 100px;
-                mix-blend-mode: multiply;
+            .spanContainer {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    max-width: 150px;
+                    mix-blend-mode: multiply;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: row;
+
+                    .item1 {
+                        opacity: 0;
+                        animation: itemfadein 1.3s ease-in;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
+                    }
+                    .item2 {
+                        opacity: 0;
+                        animation: itemfadein 1.3s ease-in;
+                        animation-delay: 1.3s;
+                        animation-fill-mode: forwards;
+                    }
+                    .item3 {
+                        opacity: 0;
+                        animation: itemfadein 1.3s ease-in;
+                        animation-delay: 2.1s;
+                        animation-fill-mode: forwards;
+                    }
+
+                    h2 {
+                        font-size: 10px;
+                    } 
+                }
             }
         }
 
@@ -23,4 +66,29 @@
             color: silver;
         }
     }
+}
+
+.fadein {
+    background-color: rgba(51, 51, 51, 0);
+    animation: fadein 1s ease;
+    animation-fill-mode: forwards;
+}
+.fadeout {
+    background-color: rgba(51, 51, 51, 1);
+    animation: fadeout 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from {background-color: rgba(51, 51, 51, 0)};
+    to {background-color: rgba(51, 51, 51, 1)};
+}
+
+@keyframes fadeout {
+    from {background-color: rgba(51, 51, 51, 1)};
+    to {background-color: rgba(51, 51, 51, 0)};
+}
+@keyframes itemfadein {
+    from {opacity: 0};
+    to {opacity: 1};
 }
