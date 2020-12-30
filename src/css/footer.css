@@ -1,5 +1,5 @@
 .footerContainer {
-  background: repeating-radial-gradient(#333, #332);
+  background-color: rgba(0, 0, 0, 0.829);
   height: 100%;
 }
 .footerContainer .borders {
