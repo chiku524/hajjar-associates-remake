@@ -60,6 +60,10 @@ const Home = () => {
         history.push('/about')
     }
 
+    const contactRedirect = () => {
+        history.push('/contact')
+    }
+
     const slides = projects.map((item) => {
       return(
           <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.altText}>
@@ -170,7 +174,7 @@ const Home = () => {
                                 <div ref={ref} className='content'>
                                     <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                                 </div> 
-                                <button>CONTACT US</button>
+                                <button onClick={contactRedirect}>CONTACT US</button>
                             </div>             
                         </div>
                     </div>
