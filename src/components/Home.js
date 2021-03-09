@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import { InView, useInView } from 'react-intersection-observer';
 import {Carousel, CarouselItem, CarouselControl} from 'reactstrap';
 import '../css/home.css';
@@ -29,6 +29,7 @@ const projects = [
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
+    const history = useHistory();
 
     const next = () => {
         if(animating) return;
@@ -45,6 +46,18 @@ const Home = () => {
     const goToIndex = (newIndex) => {
       if(animating) return;
       setActiveIndex(newIndex);
+    }
+
+    const whatWeDoRedirect = () => {
+        history.push('/what-we-do')
+    }
+
+    const industriesRedirect = () => {
+        history.push('/industries')
+    }
+
+    const ourServicesRedirect = () => {
+        history.push('/about')
     }
 
     const slides = projects.map((item) => {
@@ -107,7 +120,7 @@ const Home = () => {
                         <div className={inView ? 'fade-in companyDescription' : 'companyDescription'}>
                             <h1>What We Do</h1>
                             <p className='ref' ref={ref}>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
-                            <button>LEARN MORE</button>
+                            <button onClick={whatWeDoRedirect}>LEARN MORE</button>
                         </div>
                     </div>
                 )}
@@ -121,7 +134,7 @@ const Home = () => {
                                 <div ref={ref} className='content'>
                                     <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                                 </div> 
-                                <button>LEARN MORE</button>
+                                <button onClick={ourServicesRedirect}>LEARN MORE</button>
                             </div>   
                             <div className='opaque' />
                             <img src={voda1} />            
@@ -141,7 +154,7 @@ const Home = () => {
                                     <div ref={ref} className='content'>
                                         <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
                                     </div> 
-                                    <button>LEARN MORE</button>
+                                    <button onClick={industriesRedirect}>LEARN MORE</button>
                                 </div>
                             </div>               
                         </div>

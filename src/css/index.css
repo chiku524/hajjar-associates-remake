@@ -4,7 +4,7 @@
   margin: 0px;
 }
 .container-fluid .containTheCarousel {
-  height: 1000px;
+  height: 800px;
   width: 100%;
 }
 .container-fluid .containTheCarousel .carouselContainer {
@@ -42,29 +42,42 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-top: 1px solid silver;
-  height: 500px;
+  height: 400px;
 }
 .container-fluid .companyDescriptionContainer .companyDescription {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 40%;
+  width: 70%;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 0;
+  background-color: lightblue;
 }
 .container-fluid .companyDescriptionContainer .companyDescription h1 {
   border-bottom: 1px solid #0056b3;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+.container-fluid .companyDescriptionContainer .companyDescription p {
+  width: 80%;
+  margin-bottom: 70px;
+}
+.container-fluid .companyDescriptionContainer .companyDescription button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 .container-fluid .companyDescriptionContainer .fade-in.companyDescription {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 40%;
+  width: 70%;
   justify-content: center;
   align-items: center;
   text-align: justify;
@@ -73,13 +86,28 @@
 }
 .container-fluid .companyDescriptionContainer .fade-in.companyDescription h1 {
   border-bottom: 1px solid #0056b3;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription p {
+  width: 80%;
+  margin-bottom: 70px;
+}
+.container-fluid .companyDescriptionContainer .fade-in.companyDescription button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 .container-fluid .background {
-  opacity: 1;
+  opacity: 0;
   background-color: white;
-  border-top: 1px solid silver;
-  border-bottom: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  transform: scale(0.3);
 }
 .container-fluid .background .statsContainer {
   display: flex;
@@ -87,6 +115,7 @@
   align-items: center;
   opacity: 0;
   transition: all 1s ease-in;
+  width: 100%;
 }
 .container-fluid .background .statsContainer .stats {
   display: flex;
@@ -109,115 +138,336 @@
 .container-fluid .background .statsContainer .stats .stat .description {
   font-size: 30px;
 }
-.container-fluid .background .fade-in.statsContainer {
+.container-fluid .fade-in.background {
+  opacity: 1;
+  background-color: white;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  transform: scale(1);
+}
+.container-fluid .fade-in.background .fade-in.statsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
   transition: all 1s ease-in;
+  width: 100%;
+}
+.container-fluid .fade-in.background .fade-in.statsContainer .stats {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+}
+.container-fluid .fade-in.background .fade-in.statsContainer .stats hr {
+  border-right: 2px solid silver;
+  height: 100px;
+}
+.container-fluid .fade-in.background .fade-in.statsContainer .stats .stat {
+  padding: 0px 30px;
+}
+.container-fluid .fade-in.background .fade-in.statsContainer .stats .stat .number {
+  font-size: 40px;
+}
+.container-fluid .fade-in.background .fade-in.statsContainer .stats .stat .description {
+  font-size: 30px;
 }
 .container-fluid .servicesContainer {
   width: 100%;
+  margin: 75px auto;
 }
 .container-fluid .servicesContainer .services {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0px auto;
-  padding-bottom: 100px;
+  flex-direction: row;
+  width: 70%;
+  height: 450px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 0;
+  position: relative;
 }
-.container-fluid .servicesContainer .services h1 {
-  margin-top: 70px;
+.container-fluid .servicesContainer .services .container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  align-items: flex-start;
+  background-color: lightblue;
+  padding: 0 10%;
+}
+.container-fluid .servicesContainer .services .container h1 {
+  margin-top: 50px;
   border-bottom: 1px solid lightskyblue;
+}
+.container-fluid .servicesContainer .services .container .content {
+  width: 80%;
+  margin-top: 50px;
+}
+.container-fluid .servicesContainer .services .container button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  border: none;
+  margin-top: 35px;
+  cursor: pointer;
+}
+.container-fluid .servicesContainer .services .opaque {
+  position: absolute;
+  background-color: lightblue;
+  height: 450px;
+  width: 150px;
+  margin: 0 auto;
+  z-index: 10;
+  opacity: 0.7;
+}
+.container-fluid .servicesContainer .services img {
+  max-height: 450px;
+  width: 55%;
+  position: absolute;
+  right: 0px;
 }
 .container-fluid .servicesContainer .fade-in.services {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0px auto;
-  padding-bottom: 100px;
+  flex-direction: row;
+  width: 70%;
+  height: 450px;
   justify-content: center;
   align-items: center;
   text-align: justify;
   transition: all 1s ease-in-out;
   opacity: 1;
+  position: relative;
 }
-.container-fluid .servicesContainer .fade-in.services h1 {
-  margin-top: 70px;
-  border-bottom: 1px solid lightskyblue;
-}
-.container-fluid .servicesContainer .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-.container-fluid .servicesContainer .cards a {
-  text-decoration: none;
-  width: 40%;
-  margin: 40px 70px 40px 0px;
-}
-.container-fluid .servicesContainer .cards .card {
-  color: silver;
+.container-fluid .servicesContainer .fade-in.services .container {
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 300px;
-  justify-content: space-between;
-  border: none;
-  padding: 20px 15px;
-  background: repeating-radial-gradient(#333, #332);
-  transition: all ease 0.5s;
+  margin-left: 0px;
+  align-items: flex-start;
+  background-color: lightblue;
+  padding: 0 10%;
+}
+.container-fluid .servicesContainer .fade-in.services .container h1 {
+  margin-top: 50px;
+  border-bottom: 1px solid lightskyblue;
+}
+.container-fluid .servicesContainer .fade-in.services .container .content {
+  width: 80%;
+  margin-top: 50px;
+}
+.container-fluid .servicesContainer .fade-in.services .container button {
+  width: 150px;
+  height: 50px;
   border-radius: 25px;
-}
-.container-fluid .servicesContainer .cards .card img {
-  transform: scale(0.8);
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  opacity: 0.3;
-  transition: all 0.5s ease;
-  width: 100px;
-  height: 100px;
-}
-.container-fluid .servicesContainer .cards .card h4 {
-  text-decoration: underline;
-  text-decoration-color: green;
-}
-.container-fluid .servicesContainer .cards .card p {
-  margin-top: 40px;
-}
-.container-fluid .servicesContainer .cards .card div {
-  display: flex;
-  justify-content: flex-end;
-}
-.container-fluid .servicesContainer .cards .card div span {
-  text-align: center;
-  margin-right: 10px;
-  line-height: 40px;
-  color: green;
-  border: 1px solid green;
-  width: 130px;
-  height: 40px;
-  border-radius: 25px;
-  transition: all 0.5s ease;
-}
-.container-fluid .servicesContainer .cards .card:hover div span {
-  background-color: #0056b3;
+  background-color: navy;
   color: white;
-  border-color: #0056b3;
-  transition: all 0.5s ease;
+  border: none;
+  margin-top: 35px;
+  cursor: pointer;
 }
-.container-fluid .servicesContainer .cards .card:hover img {
+.container-fluid .servicesContainer .fade-in.services .opaque {
+  position: absolute;
+  background-color: lightblue;
+  height: 450px;
+  width: 150px;
+  margin: 0 auto;
+  z-index: 10;
+  opacity: 0.7;
+}
+.container-fluid .servicesContainer .fade-in.services img {
+  max-height: 450px;
+  width: 55%;
+  position: absolute;
+  right: 0px;
+}
+.container-fluid .industriesContainer {
+  width: 100%;
+  margin-bottom: 75px;
+}
+.container-fluid .industriesContainer .industries {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 450px;
+  margin: 0 auto;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  position: relative;
+}
+.container-fluid .industriesContainer .industries .opaque {
+  position: absolute;
+  background-color: lightblue;
+  height: 450px;
+  width: 150px;
+  margin: 43.8%;
+  z-index: 10;
+  opacity: 0.7;
+}
+.container-fluid .industriesContainer .industries img {
+  max-height: 450px;
+  width: 55.6%;
+  position: absolute;
+  left: 0px;
+}
+.container-fluid .industriesContainer .industries .container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0px;
+  align-items: flex-end;
+  background-color: lightblue;
+}
+.container-fluid .industriesContainer .industries .container .contentContainer {
+  width: 80%;
+}
+.container-fluid .industriesContainer .industries .container .contentContainer h1 {
+  margin-top: 50px;
+  border-bottom: 1px solid lightskyblue;
+  width: 130px;
+  padding-bottom: 30px;
+}
+.container-fluid .industriesContainer .industries .container .contentContainer .content {
+  width: 80%;
+  margin-top: 20px;
+}
+.container-fluid .industriesContainer .industries .container .contentContainer button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  margin-top: 35px;
+  border: none;
+  cursor: pointer;
+}
+.container-fluid .industriesContainer .fade-in.industries {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 450px;
+  align-items: center;
+  text-align: justify;
+  transition: all 1s ease-in-out;
   opacity: 1;
-  transition: all 0.5s ease;
+}
+.container-fluid .industriesContainer .fade-in.industries .opaque {
+  position: absolute;
+  background-color: lightblue;
+  height: 450px;
+  width: 150px;
+  margin: 43.8%;
+  z-index: 10;
+  opacity: 0.7;
+}
+.container-fluid .industriesContainer .fade-in.industries img {
+  max-height: 450px;
+  width: 55.6%;
+  position: absolute;
+  left: 0px;
+}
+.container-fluid .industriesContainer .fade-in.industries .container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0px;
+  align-items: flex-end;
+  background-color: lightblue;
+}
+.container-fluid .industriesContainer .fade-in.industries .container .contentContainer {
+  width: 70%;
+}
+.container-fluid .industriesContainer .fade-in.industries .container .contentContainer h1 {
+  margin-top: 50px;
+  border-bottom: 1px solid lightskyblue;
+  width: 130px;
+  padding-bottom: 30px;
+}
+.container-fluid .industriesContainer .fade-in.industries .container .contentContainer .content {
+  width: 80%;
+  margin-top: 20px;
+}
+.container-fluid .industriesContainer .fade-in.industries .container .contentContainer button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  margin-top: 35px;
+  border: none;
+  cursor: pointer;
+}
+.container-fluid .ending {
+  width: 100%;
+  background-image: url('../images//classybackground.jpg');
+  height: 450px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.container-fluid .ending .mha {
+  width: 40%;
+}
+.container-fluid .ending .mha .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-fluid .ending .mha .container h1 {
+  border-bottom: 1px solid green;
+}
+.container-fluid .ending .mha .container .content {
+  margin: 50px 0;
+}
+.container-fluid .ending .mha .container button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.container-fluid .ending .fade-in.mha {
+  width: 40%;
+}
+.container-fluid .ending .fade-in.mha .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-fluid .ending .fade-in.mha .container h1 {
+  border-bottom: 1px solid green;
+}
+.container-fluid .ending .fade-in.mha .container .content {
+  margin: 50px 0;
+}
+.container-fluid .ending .fade-in.mha .container button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 .container-fluid .line {
   transition: all 1s ease-in-out;
@@ -339,7 +589,7 @@
   }
 }
 .footerContainer {
-  background: repeating-radial-gradient(#333, #332);
+  background-color: rgba(0, 0, 0, 0.829);
   height: 100%;
 }
 .footerContainer .borders {
