@@ -134,13 +134,15 @@ const Home = () => {
                     <div className='servicesContainer'>
                         <div className={inView ? 'fade-in services' : 'services'}>
                             <div className='container'>
-                                <h1>Our Services</h1>
-                                <div ref={ref} className='content'>
-                                    <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
-                                </div> 
-                                <button onClick={ourServicesRedirect}>LEARN MORE</button>
+                                <div className='content-container'>
+                                    <h1>Our Services</h1>
+                                    <div ref={ref} className='content'>
+                                        <p>M. Hajjar & Associates has completed over 100 projects within both the public and private sectors. We provide consulting, construction, and development services to all sorts of properties that range from schools and condominiums to private owned homes and storage units.</p>
+                                    </div> 
+                                    <button onClick={ourServicesRedirect}>LEARN MORE</button>
+                                </div>
                             </div>   
-                            <div className='opaque' />
+                            {/* <div className='opaque' /> */}
                             <img src={voda1} />            
                         </div>
                     </div>
@@ -150,7 +152,7 @@ const Home = () => {
                 {({inView, ref}) => 
                     <div className='industriesContainer'>
                         <div className={inView ? 'fade-in industries' : 'industries'}>
-                            <div className='opaque' />
+                            {/* <div className='opaque' /> */}
                             <img src={voda1} /> 
                             <div className='container'>
                                 <div className='contentContainer'>
